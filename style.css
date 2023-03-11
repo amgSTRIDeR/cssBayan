@@ -1,4 +1,75 @@
+.body {
+  padding-left: 20vw;
+  padding-right: 20vw;
+}
+
 .main {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+}
+
+.main:hover .meme_img,
+.main:hover .meme_header {
+  cursor: pointer;
+  color: black;
+}
+
+.meme {
+  display: none;
+}
+
+.meme_label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1vh;
+
+  border-top: 1px solid;
+}
+
+.meme_icon {
+  display: none;
+}
+
+.main:hover .meme_icon {
+  display: block;
+}
+
+.meme:checked+.meme_header {
+  color: black;
+}
+
+.meme:hover+.meme_header {
+  color: black;
+}
+
+.meme_img {
+  display: none;
+  width: 100%;
+}
+
+.meme:hover~.meme_img {
+  display: inline-block;
+}
+
+.meme:checked~.meme_img {
+  display: inline-block;
+}
+
+.meme:hover+.meme_header .meme_icon {
+  transform: rotate(90deg);
+}
+
+.meme:checked+.meme_header .meme_icon {
+  transform: rotate(90deg);
+}
+
+.meme_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  color: blue;
 }
