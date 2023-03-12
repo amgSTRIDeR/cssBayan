@@ -30,17 +30,9 @@
   margin-left: calc(30.405vw - 47.30px);
   padding: 1vw;
   border-radius: 1vw;
-color: #89909F;
+  color: #4C86A8;
 
   font-size: calc(0.743vw + 11.62px);
-
-  transition: 0.3s ease;
-}
-
-@media (min-width: 820px) {
-  .meme_icon {
-    opacity: 0;
-  }
 }
 
 .meme_label {
@@ -54,6 +46,11 @@ color: #89909F;
   border-top: 2px solid #0B1D51;
 
   overflow: hidden;
+}
+
+.meme_label:active {
+  opacity: 0.8;
+  scale: 0.99;
 }
 
 .meme {
@@ -84,7 +81,7 @@ color: #89909F;
 @media (hover: hover) {
   .main:hover {
     background-color: #EBF2FA;
-    /* color: #FFAD05; */
+    color: #89909F;
     transition: 0.3s ease;
   }
 
@@ -92,7 +89,6 @@ color: #89909F;
   .main:hover .meme_label,
   .main:hover .meme_header {
     cursor: pointer;
-    /* color: #FFAD05; */
   }
 
 
@@ -109,10 +105,14 @@ color: #89909F;
   .meme:hover~.meme_img {
     width: 80%;
   }
-  
+
   .meme:hover+.meme_header .meme_icon {
     transform: rotate(90deg);
     fill: #0B1D51;
+  }
+
+  .meme_icon {
+    opacity: 0;
   }
 }
 
