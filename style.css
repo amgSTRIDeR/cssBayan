@@ -16,7 +16,7 @@
 .header {
   margin: 1vh;
 
-  font-size: calc(0.946vw + 12.97px);
+  font-size: calc(0.909vw + 0.943125rem);
   font-family: "AireExterior", sans-serif;
   text-align: center;
 }
@@ -24,15 +24,10 @@
 .main {
   display: flex;
   flex-direction: column;
-  margin-left: auto;
-  margin-right: auto;
-  margin-right: calc(30.405vw - 47.30px);
-  margin-left: calc(30.405vw - 47.30px);
+  margin: 0 calc(30.405vw - 2.95625rem);
   padding: 1vw;
   border-radius: 1vw;
   color: #4C86A8;
-
-  font-size: calc(0.743vw + 11.62px);
 }
 
 .meme_label {
@@ -40,10 +35,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 2vh;
-  padding-top: 2vh;
+  padding: 2vh 0;
 
-  border-top: 2px solid #0B1D51;
+  border-top: 0.125rem solid #0B1D51;
 
   overflow: hidden;
 }
@@ -68,14 +62,13 @@
   width: 100%;
   margin: 1vh 0 1vh 0;
 
-  font-size: calc(0.405vw + 12.70px);
+  font-size: calc(0.682vw + 0.73875rem);
   font-family: 'Pulsar', sans-serif;
-  text-align: center;
 }
 
 .meme_icon {
-  width: calc(0.676vw + 7.84px);
-  height: calc(0.676vw + 7.84px);
+  width: calc(0.676vw + 0.49rem);
+  height: calc(0.676vw + 0.49rem);
 }
 
 @media (hover: hover) {
