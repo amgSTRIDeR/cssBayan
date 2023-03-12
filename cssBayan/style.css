@@ -1,0 +1,151 @@
+@font-face {
+  font-family: "Pulsar";
+  src: url("./fonts/pulsarOriginal.otf");
+}
+
+@font-face {
+  font-family: "AireExterior";
+  src: url("./fonts/aireExterior.ttf");
+}
+
+.body {
+  background-color: #DFD9E2;
+  color: #0B1D51;
+}
+
+.header {
+  margin: 1vh;
+
+  font-size: calc(0.909vw + 0.943125rem);
+  font-family: "AireExterior", sans-serif;
+  text-align: center;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  padding: 1vw;
+  border-radius: 1vw;
+  color: #4C86A8;
+
+  user-select: none;
+}
+
+.meme_label {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2vh 0;
+
+  border-top: 0.125rem solid #0B1D51;
+
+  overflow: hidden;
+}
+
+.meme_label:active {
+  opacity: 0.8;
+  scale: 0.99;
+}
+
+.meme {
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+.meme_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.meme_text {
+  width: 100%;
+  margin: 1vh 0 1vh 0;
+
+  font-family: 'Pulsar', sans-serif;
+  font-size: calc(0.682vw + 0.73875rem);
+}
+
+.meme_icon {
+  width: calc(0.676vw + 0.49rem);
+  height: calc(0.676vw + 0.49rem);
+}
+
+.meme:checked+.meme_header {
+  color: #0B1D51;
+}
+
+.meme:checked:hover+.meme_header {
+  color: #0B1D51;
+}
+
+.meme_img {
+  width: 0;
+  transition: width 1s ease, opacity 1s ease;
+}
+
+.meme:checked~.meme_img {
+  width: 80%;
+}
+
+.meme:checked+.meme_header .meme_icon {
+  transform: rotate(90deg);
+}
+
+@media (hover: hover) {
+  .main:hover {
+    background-color: #EBF2FA;
+    color: #89909F;
+    transition: 0.3s ease;
+  }
+
+  .main:hover .meme_img,
+  .main:hover .meme_label,
+  .main:hover .meme_header {
+    cursor: pointer;
+  }
+
+  .main:hover .meme_icon {
+    opacity: 1;
+    fill: #0B1D51;
+    transition: transform 1s ease;
+  }
+
+  .meme:hover+.meme_header {
+    color: #0B1D51;
+  }
+
+  .meme:hover~.meme_img {
+    width: 80%;
+  }
+
+  .meme:hover+.meme_header .meme_icon {
+    transform: rotate(90deg);
+    fill: #0B1D51;
+  }
+
+  .meme_icon {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 820px) {
+  .main {
+    margin: 0 10vw;
+  }
+}
+
+@media (min-width: 821px) and (max-width: 1920px) {
+  .main {
+    margin: 0 calc(56.182vw - 23.70rem);
+  }
+}
+
+@media (min-width: 1921px) {
+  .main {
+    margin: 0 calc(50.046vw - 16.34rem);
+  }
+}
