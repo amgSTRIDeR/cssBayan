@@ -49,7 +49,9 @@
 }
 
 .meme {
-  display: none;
+  visibility: hidden;
+  width: 0;
+  height: 0;
 }
 
 .meme_header {
