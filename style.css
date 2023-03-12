@@ -27,6 +27,8 @@
   padding: 1vw;
   border-radius: 1vw;
   color: #4C86A8;
+
+  user-select: none;
 }
 
 .meme_label {
